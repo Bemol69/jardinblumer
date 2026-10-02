@@ -1,0 +1,18 @@
+{
+  "nombre": "Ramo de novia",
+  "foto": "/img/productos/novia.jpg",
+  "fotos": [],
+  "descripcion": "Propuestas en tonos pastel con varas preservadas y flores de la estación. Agenda tu matrimonio con tiempo.",
+  "selector": "Formato",
+  "variantes": [
+    {
+      "nombre": "Ramo de novia",
+      "precio": 60000
+    }
+  ],
+  "a_cotizar": true,
+  "etiqueta": "A cotizar",
+  "orden": 80,
+  "agotado": false,
+  "visible": true
+}

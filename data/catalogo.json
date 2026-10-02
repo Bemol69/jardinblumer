@@ -1,0 +1,367 @@
+{
+  "_aviso": "Archivo generado por scripts/build.mjs. No editar a mano.",
+  "categorias": [
+    {
+      "id": "ramos-y-bouquets",
+      "nombre": "Ramos y bouquets",
+      "productos": [
+        "bouquet-mixto",
+        "bouquet-mixto-jarron",
+        "flowerbox"
+      ]
+    },
+    {
+      "id": "por-varas",
+      "nombre": "Flores por varas",
+      "productos": [
+        "peonias-coral",
+        "tulipanes-mixtos",
+        "girasoles",
+        "rosas-a-eleccion"
+      ]
+    },
+    {
+      "id": "bodas-y-despedidas",
+      "nombre": "Novias y despedidas",
+      "productos": [
+        "ramo-novia",
+        "canasta-despedida"
+      ]
+    }
+  ],
+  "productos": [
+    {
+      "id": "peonias-coral",
+      "nombre": "Peonias coral · bouquet",
+      "foto": "img/productos/peonias.jpg",
+      "fotos": [
+        "img/productos/peonias-2.jpg"
+      ],
+      "selector": "Formato",
+      "variantes": [
+        {
+          "nombre": "Bouquet de peonias",
+          "precio": 38000
+        }
+      ],
+      "descripcion": "La flor más esperada del año, con tiempo límite. Variedades exclusivas de la VI Región, solo en temporada.",
+      "incluye": [],
+      "etiqueta": "Solo en temporada",
+      "a_cotizar": true,
+      "agotado": false,
+      "desde": 38000,
+      "mini": "img/_opt/ab3d4fb63441-640.webp",
+      "minis": [
+        "img/_opt/e4c1fe633a6b-640.webp"
+      ]
+    },
+    {
+      "id": "bouquet-mixto",
+      "nombre": "Bouquet Mixto",
+      "foto": "img/productos/bouquet-mixto.jpg",
+      "fotos": [
+        "img/productos/bouquet-mixto-2.jpg"
+      ],
+      "selector": "Tamaño",
+      "variantes": [
+        {
+          "nombre": "S · 16 a 20 varas",
+          "precio": 35000
+        },
+        {
+          "nombre": "M · 24 a 30 varas",
+          "precio": 47000
+        },
+        {
+          "nombre": "L · 34 a 39 varas",
+          "precio": 66000
+        },
+        {
+          "nombre": "XL · 45 a 52 varas",
+          "precio": 87000
+        },
+        {
+          "nombre": "2XL · 56 a 65 varas",
+          "precio": 125000
+        },
+        {
+          "nombre": "3XL · 66 a 72 varas",
+          "precio": 148000
+        }
+      ],
+      "descripcion": "Nuestro sello: flores de temporada mezcladas una a una, estilo silvestre. Cada tamaño indica las varas que lleva.",
+      "incluye": [],
+      "etiqueta": "Más pedido",
+      "a_cotizar": false,
+      "agotado": false,
+      "desde": 35000,
+      "mini": "img/_opt/cabeabf35e20-640.webp",
+      "minis": [
+        "img/_opt/6fb7d70252e8-640.webp"
+      ]
+    },
+    {
+      "id": "bouquet-mixto-jarron",
+      "nombre": "Bouquet Mixto + Jarrón de vidrio",
+      "foto": "img/productos/bouquet-jarron.jpg",
+      "fotos": [
+        "img/productos/bouquet-jarron-2.jpg"
+      ],
+      "selector": "Tamaño",
+      "variantes": [
+        {
+          "nombre": "XS",
+          "precio": 39000
+        },
+        {
+          "nombre": "S",
+          "precio": 48000
+        },
+        {
+          "nombre": "M",
+          "precio": 66000
+        },
+        {
+          "nombre": "L",
+          "precio": 92000
+        },
+        {
+          "nombre": "XL",
+          "precio": 128000
+        }
+      ],
+      "descripcion": "El bouquet mixto listo para poner en agua, con su jarrón de vidrio incluido.",
+      "incluye": [],
+      "etiqueta": "",
+      "a_cotizar": false,
+      "agotado": false,
+      "desde": 39000,
+      "mini": "img/_opt/831338edd4bc-640.webp",
+      "minis": [
+        "img/_opt/8240f8912dae-640.webp"
+      ]
+    },
+    {
+      "id": "flowerbox",
+      "nombre": "FlowerBox",
+      "foto": "img/productos/flowerbox.jpg",
+      "fotos": [
+        "img/productos/flowerbox-2.jpg"
+      ],
+      "selector": "Tamaño",
+      "variantes": [
+        {
+          "nombre": "XS",
+          "precio": 45000
+        },
+        {
+          "nombre": "S",
+          "precio": 59000
+        },
+        {
+          "nombre": "M",
+          "precio": 78000
+        },
+        {
+          "nombre": "L",
+          "precio": 97000
+        },
+        {
+          "nombre": "XL",
+          "precio": 120000
+        }
+      ],
+      "descripcion": "Caja de flores para regalar: un obsequio único, delicado y elegante, armado con lo más lindo de la temporada.",
+      "incluye": [],
+      "etiqueta": "Para regalar",
+      "a_cotizar": false,
+      "agotado": false,
+      "desde": 45000,
+      "mini": "img/_opt/657247fadc61-640.webp",
+      "minis": [
+        "img/_opt/7b3d37ae6854-640.webp"
+      ]
+    },
+    {
+      "id": "tulipanes-mixtos",
+      "nombre": "Tulipanes mixtos",
+      "foto": "img/productos/tulipanes.jpg",
+      "fotos": [],
+      "selector": "Cantidad de varas",
+      "variantes": [
+        {
+          "nombre": "10 varas",
+          "precio": 26000
+        },
+        {
+          "nombre": "20 varas",
+          "precio": 55000
+        },
+        {
+          "nombre": "30 varas",
+          "precio": 82000
+        },
+        {
+          "nombre": "40 varas",
+          "precio": 110000
+        },
+        {
+          "nombre": "50 varas",
+          "precio": 137000
+        },
+        {
+          "nombre": "60 varas",
+          "precio": 162000
+        },
+        {
+          "nombre": "70 varas",
+          "precio": 186000
+        }
+      ],
+      "descripcion": "Tulipanes de colores armados en ramo. Previa reserva y confirmación.",
+      "incluye": [],
+      "etiqueta": "Previa reserva",
+      "a_cotizar": false,
+      "agotado": false,
+      "desde": 26000,
+      "mini": "img/_opt/7fa049ce4d6d-640.webp",
+      "minis": []
+    },
+    {
+      "id": "girasoles",
+      "nombre": "Girasoles",
+      "foto": "img/productos/girasoles.jpg",
+      "fotos": [
+        "img/productos/girasoles-2.jpg"
+      ],
+      "selector": "Cantidad de varas",
+      "variantes": [
+        {
+          "nombre": "10 varas",
+          "precio": 38000
+        },
+        {
+          "nombre": "20 varas",
+          "precio": 82000
+        },
+        {
+          "nombre": "30 varas",
+          "precio": 119000
+        },
+        {
+          "nombre": "40 varas",
+          "precio": 158000
+        },
+        {
+          "nombre": "50 varas",
+          "precio": 194000
+        }
+      ],
+      "descripcion": "Un rayito de sol para cualquier día gris. Previa reserva y confirmación.",
+      "incluye": [],
+      "etiqueta": "Previa reserva",
+      "a_cotizar": false,
+      "agotado": false,
+      "desde": 38000,
+      "mini": "img/_opt/6c6747c03f76-640.webp",
+      "minis": [
+        "img/_opt/9af4aca069ba-640.webp"
+      ]
+    },
+    {
+      "id": "rosas-a-eleccion",
+      "nombre": "Rosas a elección",
+      "foto": "img/productos/rosas.jpg",
+      "fotos": [],
+      "selector": "Cantidad de varas",
+      "variantes": [
+        {
+          "nombre": "10 varas",
+          "precio": 29000
+        },
+        {
+          "nombre": "20 varas",
+          "precio": 65000
+        },
+        {
+          "nombre": "30 varas",
+          "precio": 95000
+        },
+        {
+          "nombre": "40 varas",
+          "precio": 128000
+        },
+        {
+          "nombre": "50 varas",
+          "precio": 156000
+        },
+        {
+          "nombre": "100 varas",
+          "precio": 325000
+        }
+      ],
+      "descripcion": "Elige el color y la cantidad. Previa reserva y confirmación.",
+      "incluye": [],
+      "etiqueta": "Previa reserva",
+      "a_cotizar": false,
+      "agotado": false,
+      "desde": 29000,
+      "mini": "img/_opt/98591de40e38-640.webp",
+      "minis": []
+    },
+    {
+      "id": "canasta-despedida",
+      "nombre": "Canasta floral de despedida",
+      "foto": "img/productos/canasta.jpg",
+      "fotos": [],
+      "selector": "Formato",
+      "variantes": [
+        {
+          "nombre": "Canasta",
+          "precio": 45000
+        }
+      ],
+      "descripcion": "Canastos, jarrones y cubre urnas para acompañar con calma y belleza. Diseño a pedido.",
+      "incluye": [],
+      "etiqueta": "A cotizar",
+      "a_cotizar": true,
+      "agotado": false,
+      "desde": 45000,
+      "mini": "img/_opt/fa3545cb5ce7-640.webp",
+      "minis": []
+    },
+    {
+      "id": "ramo-novia",
+      "nombre": "Ramo de novia",
+      "foto": "img/productos/novia.jpg",
+      "fotos": [],
+      "selector": "Formato",
+      "variantes": [
+        {
+          "nombre": "Ramo de novia",
+          "precio": 60000
+        }
+      ],
+      "descripcion": "Propuestas en tonos pastel con varas preservadas y flores de la estación. Agenda tu matrimonio con tiempo.",
+      "incluye": [],
+      "etiqueta": "A cotizar",
+      "a_cotizar": true,
+      "agotado": false,
+      "desde": 60000,
+      "mini": "img/_opt/a2f80a5a9a7a-640.webp",
+      "minis": []
+    }
+  ],
+  "cupones": [
+    {
+      "h": "3a7539be6170e9d850f4b684aeb326a7b5fd245081d5edd9b0467cdf6a4f2921",
+      "titulo": "Primavera Blumer",
+      "tipo": "porcentaje",
+      "valor": 5,
+      "minimo": 30000,
+      "vence": "",
+      "productos": null,
+      "aplica": "Toda la tienda"
+    }
+  ]
+}

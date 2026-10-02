@@ -1,0 +1,357 @@
+# Configuración del panel /admin (Sveltia CMS)
+# Cada cambio que se guarda aquí crea un commit en GitHub.
+# Vercel arma la web (scripts/build.mjs) y la publica en ~30 segundos.
+
+backend:
+  name: github
+  repo: %%GITHUB_REPO%%
+  branch: main
+  commit_messages:
+    create: "Catálogo: crea {{collection}} «{{slug}}»"
+    update: "Catálogo: actualiza {{collection}} «{{slug}}»"
+    delete: "Catálogo: elimina {{collection}} «{{slug}}»"
+    uploadMedia: "Catálogo: sube foto {{path}}"
+    deleteMedia: "Catálogo: elimina foto {{path}}"
+
+site_url: %%SITE_URL%%
+display_url: %%SITE_URL%%
+logo_url: ../img/logo.jpg
+
+media_folder: img/productos
+public_folder: /img/productos
+
+# Nombres de archivo sin tildes ni ñ (ej: "Bouquet Mixto" -> bouquet-mixto.json)
+slug:
+  encoding: ascii
+  clean_accents: true
+  sanitize_replacement: "-"
+
+# Las fotos del celular se achican y convierten a WebP al subirlas, para que la web cargue rápido
+media_libraries:
+  default:
+    config:
+      transformations:
+        raster_image:
+          format: webp
+          quality: 85
+          width: 1200
+          height: 1200
+
+collections:
+  # ---------- CATEGORÍAS (filtros del catálogo) ----------
+  - name: categorias
+    label: Categorías
+    label_singular: categoría
+    description: "Los filtros del catálogo (Ramos y bouquets, Flores por varas…). Abre uno para elegir qué productos aparecen en él."
+    icon: filter_list
+    folder: data/categorias
+    format: json
+    create: true
+    delete: true
+    identifier_field: nombre
+    slug: "{{nombre}}"
+    summary: "{{nombre}}"
+    sortable_fields:
+      fields: [orden, nombre]
+      default:
+        field: orden
+        direction: ascending
+    fields:
+      - name: nombre
+        label: Nombre del filtro
+        widget: string
+        hint: "Así aparece en la web. Ej: Flores por varas"
+
+      - name: productos
+        label: Productos en este filtro
+        widget: relation
+        collection: productos
+        value_field: "{{slug}}"
+        search_fields: [nombre]
+        display_fields: ["{{nombre}}"]
+        multiple: true
+        required: false
+        hint: "Busca y marca los productos. Un mismo producto puede estar en varios filtros. Para moverlo, quítalo de aquí y agrégalo en el otro."
+
+      - name: orden
+        label: Posición
+        widget: number
+        value_type: int
+        default: 100
+        hint: "Los números más bajos aparecen primero en la barra de filtros."
+
+      - name: visible
+        label: Mostrar en la web
+        widget: boolean
+        default: true
+        hint: "Desactívalo para esconder el filtro sin borrarlo."
+
+  # ---------- PRODUCTOS ----------
+  - name: productos
+    label: Productos
+    label_singular: producto
+    description: "Ramos, bouquets, flores por varas y arreglos. Para que un producto aparezca en un filtro, agrégalo desde Categorías."
+    icon: local_florist
+    folder: data/productos
+    format: json
+    create: true
+    delete: true
+    identifier_field: nombre
+    slug: "{{nombre}}"
+    summary: "{{nombre}}"
+    thumbnail: foto
+    sortable_fields:
+      fields: [orden, nombre]
+      default:
+        field: orden
+        direction: ascending
+    fields:
+      - name: nombre
+        label: Nombre del producto
+        widget: string
+        hint: "Ej: Bouquet Mixto, FlowerBox, Peonias coral"
+
+      - name: foto
+        label: Foto principal
+        widget: image
+        hint: "La que se ve en el catálogo. Ideal una foto vertical (4:5)."
+
+      - name: fotos
+        label: Más fotos
+        label_singular: foto
+        widget: list
+        required: false
+        field:
+          name: foto
+          label: Foto
+          widget: image
+        hint: "Opcional. Otro ángulo del arreglo. La primera aparece al pasar el mouse sobre el producto."
+
+      - name: descripcion
+        label: Descripción
+        widget: text
+        required: false
+        hint: "Opcional. Una o dos frases. Ej: Flores de temporada mezcladas una a una, estilo silvestre."
+
+      - name: selector
+        label: Qué elige el cliente
+        widget: select
+        options: ["Tamaño", "Cantidad de varas", "Formato"]
+        default: "Tamaño"
+        hint: "El título de las opciones de abajo. Ej: Tamaño (S, M, L) o Cantidad de varas (10, 20, 30)."
+
+      - name: variantes
+        label: Opciones y precios
+        label_singular: opción
+        widget: list
+        summary: "{{nombre}} · ${{precio}}"
+        min: 1
+        hint: "Una línea por opción, cada una con su precio. Si el producto tiene un solo precio, deja una sola opción. Cuando algo se agote, bórralo de aquí."
+        fields:
+          - { name: nombre, label: Opción, widget: string, hint: "Ej: M · 24 a 30 varas, o 20 varas" }
+          - { name: precio, label: Precio, widget: number, value_type: int, min: 0, hint: "Solo números, sin puntos ni signo $. Ej: 47000" }
+
+      - name: a_cotizar
+        label: Precio a confirmar
+        widget: boolean
+        default: false
+        hint: "Actívalo para novias, eventos o arreglos de despedida: el precio sirve de referencia y se confirma por WhatsApp."
+
+      - name: incluye
+        label: Qué incluye
+        label_singular: ítem
+        widget: list
+        required: false
+        field:
+          name: item
+          label: Ítem
+          widget: string
+        hint: "Un ítem por línea. Ej: Jarrón de vidrio, Tarjeta Blumer."
+
+      - name: etiqueta
+        label: Etiqueta
+        widget: string
+        required: false
+        hint: "Opcional. Aparece sobre la foto. Ej: Más pedido, Solo en temporada."
+
+      - name: orden
+        label: Posición
+        widget: number
+        value_type: int
+        default: 1000
+        hint: "Los números más bajos aparecen primero en el catálogo."
+
+      - name: agotado
+        label: Agotado
+        widget: boolean
+        default: false
+        hint: "Si está activado, se muestra 'Consultar' en vez de 'Agregar'."
+
+      - name: visible
+        label: Mostrar en la web
+        widget: boolean
+        default: true
+        hint: "Desactívalo para ocultar el producto sin borrarlo."
+
+  # ---------- CÓDIGOS DE DESCUENTO ----------
+  - name: cupones
+    label: Códigos de descuento
+    label_singular: código de descuento
+    description: "Códigos que tus clientes escriben en la bolsa. La web les dice si es válido y el descuento llega calculado en el mensaje de WhatsApp."
+    icon: sell
+    folder: data/cupones
+    format: json
+    create: true
+    delete: true
+    identifier_field: titulo
+    slug: "{{titulo}}"
+    summary: "{{codigo}} · {{titulo}} · {{activo}}"
+    sortable_fields:
+      fields: [titulo, codigo, vence]
+    fields:
+      - name: titulo
+        label: Título
+        widget: string
+        hint: "Para que tú lo reconozcas y el cliente lo vea al aplicarlo. Ej: Primavera Blumer, Día de la Madre."
+
+      - name: codigo
+        label: Código
+        widget: string
+        pattern: ['^[A-Za-z0-9-]{3,20}$', "Entre 3 y 20 letras, números o guiones, sin espacios ni tildes. Ej: PRIMAVERA"]
+        hint: "Lo que el cliente escribe. Da lo mismo si usa mayúsculas o minúsculas."
+
+      - name: tipo
+        label: Tipo de descuento
+        widget: select
+        options:
+          - { label: "Porcentaje (%)", value: porcentaje }
+          - { label: "Monto fijo en pesos ($)", value: monto }
+        default: porcentaje
+
+      - name: valor
+        label: Descuento
+        widget: number
+        value_type: int
+        min: 1
+        hint: "Solo el número. Si es porcentaje: 10 = 10% de descuento. Si es monto fijo: 5000 = $5.000 menos."
+
+      - name: categorias
+        label: Aplica a estas categorías
+        widget: relation
+        collection: categorias
+        value_field: "{{slug}}"
+        search_fields: [nombre]
+        display_fields: [nombre]
+        multiple: true
+        required: false
+        hint: "Opcional. Si dejas vacías las categorías Y los productos, el código sirve para toda la tienda."
+
+      - name: productos
+        label: Aplica a estos productos
+        widget: relation
+        collection: productos
+        value_field: "{{slug}}"
+        search_fields: [nombre]
+        display_fields: ["{{nombre}}"]
+        multiple: true
+        required: false
+        hint: "Opcional. Se suma a las categorías de arriba."
+
+      - name: minimo
+        label: Compra mínima
+        widget: number
+        value_type: int
+        min: 0
+        required: false
+        hint: "Opcional. Monto mínimo para que funcione. Ej: 30000. Vacío = sin mínimo."
+
+      - name: vence
+        label: Válido hasta
+        widget: datetime
+        format: "YYYY-MM-DD"
+        time_format: false
+        required: false
+        hint: "Opcional. El código deja de funcionar al terminar ese día."
+
+      - name: activo
+        label: Activo
+        widget: boolean
+        default: true
+        hint: "Apágalo para pausar una promo sin borrarla."
+
+  # ---------- AJUSTES (datos de contacto y portada, editables por el cliente) ----------
+  - name: ajustes
+    label: Ajustes de la tienda
+    icon: settings
+    files:
+      - name: ajustes
+        label: Contacto, horario y portada
+        file: data/ajustes.json
+        format: json
+        fields:
+          - name: whatsapp
+            label: WhatsApp para pedidos
+            widget: string
+            pattern: ['^\+?[0-9 ]{10,17}$', "Formato internacional, ej: 56912345678"]
+            hint: "Con código de país y sin +. Ej: 56912345678"
+          - { name: instagram, label: Usuario de Instagram, widget: string, required: false, hint: "Sin @. Déjalo vacío para ocultarlo." }
+          - { name: tiktok, label: Usuario de TikTok, widget: string, required: false, hint: "Sin @. Déjalo vacío para ocultarlo." }
+          - { name: email, label: Correo, widget: string, required: false }
+          - { name: direccion, label: Dirección de la tienda, widget: string, required: false, hint: "Calle y número (sin la ciudad). Ej: Bombero Villalobos #01231, local 03" }
+          - { name: ciudad, label: Ciudad, widget: string }
+          - { name: region, label: Región, widget: string, required: false }
+          - { name: envios, label: Despachos, widget: string, required: false, hint: "Ej: Despachos a domicilio" }
+          - name: empresas_envio
+            label: Empresas de envío (otras ciudades)
+            widget: select
+            multiple: true
+            options: [Starken, Chilexpress, Blue Express]
+            default: [Starken, Chilexpress, Blue Express]
+            hint: "Las que el cliente puede elegir al pedir un envío fuera de Rancagua."
+          - { name: horario_dias, label: Días de atención, widget: string, default: "Lunes a sábado" }
+          - { name: hora_abre, label: Hora de apertura, widget: string, pattern: ['^\d{2}:\d{2}$', "Formato HH:MM, ej 09:00"], hint: "Se usa para mostrar «Abierto ahora» en la web." }
+          - { name: hora_cierra, label: Hora de cierre, widget: string, pattern: ['^\d{2}:\d{2}$', "Formato HH:MM, ej 19:00"] }
+          - { name: dom_abre, label: Apertura domingo, widget: string, required: false, pattern: ['^\d{2}:\d{2}$', "Formato HH:MM, ej 10:00"], hint: "Déjalo vacío si no abres domingo." }
+          - { name: dom_cierra, label: Cierre domingo, widget: string, required: false, pattern: ['^\d{2}:\d{2}$', "Formato HH:MM, ej 15:00"] }
+          - { name: horario_detalle, label: Horario completo, widget: string, required: false, hint: "Texto libre. Ej: Lun a Sáb 9:00–14:00 y 15:00–19:00 · Dom 10:00–15:00" }
+          - { name: hero_titulo, label: Título de la portada, widget: string }
+          - { name: hero_destacado, label: Parte destacada del título, widget: string, required: false, hint: "Aparece en letra manuscrita al final del título." }
+          - { name: hero_bajada, label: Texto bajo el título, widget: text }
+
+  # ---------- AVISO DE TEMPORADA Y CINTA ----------
+  - name: inicio
+    label: Aviso y cinta de frases
+    description: "El aviso de temporada (ej: fiebre de peonias) y las frases de la cinta que cruza la portada."
+    icon: campaign
+    files:
+      - name: flyer
+        label: Aviso de temporada
+        file: data/flyer.json
+        format: json
+        fields:
+          - { name: mostrar, label: Mostrar aviso en la web, widget: boolean, default: true, hint: "Apágalo cuando termine la temporada." }
+          - { name: titulo, label: Título, widget: string, hint: "Ej: Fiebre de peonias 🌺, Día de la Madre" }
+          - { name: descripcion, label: Texto, widget: text, hint: "Una o dos frases sobre la flor o la fecha." }
+          - { name: mensaje_whatsapp, label: Mensaje de WhatsApp, widget: string, hint: "Lo que se escribe solo cuando tocan «Reservar»." }
+
+      - name: franjas
+        label: Cinta de frases
+        file: data/franjas.json
+        format: json
+        fields:
+          - name: franja1
+            label: Cinta bajo la portada
+            widget: object
+            fields:
+              - name: frases
+                label: Frases
+                label_singular: frase
+                widget: list
+                min: 1
+                field: { name: frase, label: Frase, widget: string }
+                hint: "Una frase corta por línea (2 a 5 palabras). Ej: Despachos a domicilio, Matrimonios y eventos."
+              - name: velocidad
+                label: Velocidad
+                widget: select
+                options: [{ label: Lenta, value: lenta }, { label: Normal, value: normal }, { label: Rápida, value: rapida }]
+                default: normal

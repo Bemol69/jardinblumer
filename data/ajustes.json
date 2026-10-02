@@ -1,0 +1,24 @@
+{
+  "whatsapp": "56939221936",
+  "instagram": "jardinblumer",
+  "tiktok": "",
+  "email": "",
+  "direccion": "Bombero Villalobos #01231, local 03",
+  "ciudad": "Rancagua",
+  "region": "Región de O'Higgins",
+  "envios": "Despachos a domicilio",
+  "empresas_envio": [
+    "Starken",
+    "Chilexpress",
+    "Blue Express"
+  ],
+  "horario_dias": "Lunes a sábado",
+  "hora_abre": "09:00",
+  "hora_cierra": "19:00",
+  "horario_detalle": "Lun a Sáb 9:00–14:00 y 15:00–19:00 · Dom 10:00–15:00",
+  "hero_titulo": "Tu espacio natural",
+  "hero_destacado": "en casa",
+  "hero_bajada": "Flores y plantas de temporada, armadas una a una en Rancagua. Ramos silvestres con sello Blumer, listos para regalar o regalarte.",
+  "dom_abre": "10:00",
+  "dom_cierra": "15:00"
+}

@@ -1,0 +1,36 @@
+{
+  "nombre": "Girasoles",
+  "foto": "/img/productos/girasoles.jpg",
+  "fotos": [
+    "/img/productos/girasoles-2.jpg"
+  ],
+  "descripcion": "Un rayito de sol para cualquier día gris. Previa reserva y confirmación.",
+  "selector": "Cantidad de varas",
+  "variantes": [
+    {
+      "nombre": "10 varas",
+      "precio": 38000
+    },
+    {
+      "nombre": "20 varas",
+      "precio": 82000
+    },
+    {
+      "nombre": "30 varas",
+      "precio": 119000
+    },
+    {
+      "nombre": "40 varas",
+      "precio": 158000
+    },
+    {
+      "nombre": "50 varas",
+      "precio": 194000
+    }
+  ],
+  "a_cotizar": false,
+  "etiqueta": "Previa reserva",
+  "orden": 50,
+  "agotado": false,
+  "visible": true
+}

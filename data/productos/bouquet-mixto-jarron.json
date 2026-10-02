@@ -1,0 +1,36 @@
+{
+  "nombre": "Bouquet Mixto + Jarrón de vidrio",
+  "foto": "/img/productos/bouquet-jarron.jpg",
+  "fotos": [
+    "/img/productos/bouquet-jarron-2.jpg"
+  ],
+  "descripcion": "El bouquet mixto listo para poner en agua, con su jarrón de vidrio incluido.",
+  "selector": "Tamaño",
+  "variantes": [
+    {
+      "nombre": "XS",
+      "precio": 39000
+    },
+    {
+      "nombre": "S",
+      "precio": 48000
+    },
+    {
+      "nombre": "M",
+      "precio": 66000
+    },
+    {
+      "nombre": "L",
+      "precio": 92000
+    },
+    {
+      "nombre": "XL",
+      "precio": 128000
+    }
+  ],
+  "a_cotizar": false,
+  "etiqueta": "",
+  "orden": 20,
+  "agotado": false,
+  "visible": true
+}

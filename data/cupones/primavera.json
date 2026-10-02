@@ -1,0 +1,10 @@
+{
+  "titulo": "Primavera Blumer",
+  "codigo": "PRIMAVERA",
+  "tipo": "porcentaje",
+  "valor": 5,
+  "categorias": [],
+  "productos": [],
+  "minimo": 30000,
+  "activo": true
+}

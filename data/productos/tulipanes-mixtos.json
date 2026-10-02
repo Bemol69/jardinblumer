@@ -1,0 +1,42 @@
+{
+  "nombre": "Tulipanes mixtos",
+  "foto": "/img/productos/tulipanes.jpg",
+  "fotos": [],
+  "descripcion": "Tulipanes de colores armados en ramo. Previa reserva y confirmación.",
+  "selector": "Cantidad de varas",
+  "variantes": [
+    {
+      "nombre": "10 varas",
+      "precio": 26000
+    },
+    {
+      "nombre": "20 varas",
+      "precio": 55000
+    },
+    {
+      "nombre": "30 varas",
+      "precio": 82000
+    },
+    {
+      "nombre": "40 varas",
+      "precio": 110000
+    },
+    {
+      "nombre": "50 varas",
+      "precio": 137000
+    },
+    {
+      "nombre": "60 varas",
+      "precio": 162000
+    },
+    {
+      "nombre": "70 varas",
+      "precio": 186000
+    }
+  ],
+  "a_cotizar": false,
+  "etiqueta": "Previa reserva",
+  "orden": 40,
+  "agotado": false,
+  "visible": true
+}

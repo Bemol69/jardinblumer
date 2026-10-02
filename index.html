@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>%%SEO_TITULO%%</title>
+  <meta name="description" content="%%SEO_DESCRIPCION%%">
+  <meta name="theme-color" content="%%COLOR_AGUA%%">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="apple-touch-icon" href="/img/logo.jpg">
+  <!-- SEO:HEAD (lo completa scripts/build.mjs: canonical, Open Graph y datos estructurados) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="%%FUENTES_URL%%" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+
+  <!-- Iconos de línea -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="i-truck" viewBox="0 0 24 24"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2M15 18H9M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.62l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+      <symbol id="i-chat" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+      <symbol id="i-ig" viewBox="0 0 24 24"><rect width="20" height="20" x="2" y="2" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+      <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+      <symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18M16 10a4 4 0 0 1-8 0"/></symbol>
+      <symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M10 11v6M14 11v6"/></symbol>
+      <symbol id="i-ext" viewBox="0 0 24 24"><path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></symbol>
+      <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5V20a1 1 0 0 1-1 1h-5v-6h-6v6H4a1 1 0 0 1-1-1z"/></symbol>
+      <symbol id="i-store" viewBox="0 0 24 24"><path d="M3 9 4.5 4h15L21 9M3 9v11h18V9M3 9h18M9 20v-6h6v6"/></symbol>
+      <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></symbol>
+      <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="4" rx="1"/><path d="M12 8v13M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7M7.5 8a2.5 2.5 0 0 1 0-5A4.8 8 0 0 1 12 8a4.8 8 0 0 1 4.5-5 2.5 2.5 0 0 1 0 5"/></symbol>
+      <symbol id="i-heart" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></symbol>
+      <symbol id="i-cal" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+    </defs>
+  </svg>
+
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#" class="brand" aria-label="%%NOMBRE%%, inicio">
+        <span class="brand__script">%%MARCA_A%%</span>
+        <span class="brand__big">%%MARCA_B%%</span>
+      </a>
+      <nav class="nav__links" aria-label="Principal">
+        <a href="#catalogo">Catálogo</a>
+        <!-- SI:AVISO --><a href="#temporada">Temporada</a><!-- /SI:AVISO -->
+        <a href="#comprar">Cómo comprar</a>
+        <a href="#eventos">Novias y eventos</a>
+        <a href="#tienda">Visítanos</a>
+      </nav>
+      <div class="nav__actions">
+        <span class="open-pill" id="openPill" hidden><i></i><span id="openText"></span></span>
+        <button class="bag-btn" type="button" data-open-bag aria-label="Abrir mi pedido">
+          <svg class="ic"><use href="#i-bag"/></svg><span class="bag-btn__label">Mi pedido</span>
+          <span class="bag-btn__n" id="bagCount" hidden>0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- PORTADA: texto grande + foto dentro de un jarrón -->
+    <section class="hero" id="inicio">
+      <div class="hero__bg" aria-hidden="true"><span>%%MARCA_B%%</span></div>
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="kicker"><svg class="ic"><use href="#i-leaf"/></svg> %%RUBRO%% · %%CIUDAD%%</p>
+          <h1><span class="split">%%HERO_TITULO%%</span> <em class="script">%%HERO_DESTACADO%%</em></h1>
+          <p class="lead">%%HERO_BAJADA%%</p>
+          <div class="hero__cta">
+            <a class="btn btn--primary btn--lg" href="#catalogo">Ver el catálogo <svg class="ic"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn--whatsapp btn--lg" id="heroWa" target="_blank" rel="noopener"><svg class="ic"><use href="#i-chat"/></svg> Escribir por WhatsApp</a>
+          </div>
+          <ul class="facts">
+            <li><strong data-count="14100">14,1 mil</strong><span>seguidores en Instagram</span></li>
+            <li><strong>%%N_PRODUCTOS%%</strong><span>arreglos en el catálogo</span></li>
+            <li><strong>A domicilio</strong><span>despachos en Rancagua</span></li>
+          </ul>
+        </div>
+
+        <div class="hero__art">
+          <svg class="vase-defs" width="0" height="0" aria-hidden="true">
+            <defs>
+              <clipPath id="vase" clipPathUnits="objectBoundingBox">
+                <path d="M0.36 0.0 C0.36 0.0 0.35 0.02 0.35 0.05 C0.35 0.12 0.42 0.17 0.30 0.27 C0.12 0.40 0.0 0.52 0.0 0.68 C0.0 0.86 0.2 1.0 0.5 1.0 C0.8 1.0 1.0 0.86 1.0 0.68 C1.0 0.52 0.88 0.40 0.70 0.27 C0.58 0.17 0.65 0.12 0.65 0.05 C0.65 0.02 0.64 0.0 0.64 0.0 Z"/>
+              </clipPath>
+            </defs>
+          </svg>
+          <div class="vase"><img src="%%HERO_1%%" alt="%%HERO_1_ALT%%" fetchpriority="high"></div>
+          <img class="orb orb--a" src="%%HERO_2%%" alt="%%HERO_2_ALT%%">
+          <img class="orb orb--b" src="%%HERO_3%%" alt="%%HERO_3_ALT%%">
+          <a class="hang" href="#catalogo" aria-label="Ver los bouquets mixtos">
+            <span class="hang__hole"></span>
+            <small>Bouquet mixto</small>
+            <strong>desde $35.000</strong>
+            <em class="script">con cariño</em>
+          </a>
+          <svg class="bee" viewBox="0 0 64 48" aria-hidden="true">
+            <ellipse cx="22" cy="14" rx="12" ry="7" class="bee__wing"/>
+            <ellipse cx="38" cy="12" rx="12" ry="7" class="bee__wing bee__wing--b"/>
+            <ellipse cx="32" cy="28" rx="16" ry="11" class="bee__body"/>
+            <path d="M26 19v18M33 18v20M40 20v16" class="bee__stripe"/>
+            <circle cx="49" cy="26" r="2" fill="#262B48"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- CINTA -->
+    <div class="ribbon-wrap"><div class="ribbon" aria-hidden="true">
+      <div class="ribbon__track" style="--dur: %%FRANJA1_SEG%%s"><!-- FRANJA1 --></div>
+    </div></div>
+
+    <!-- AVISO DE TEMPORADA -->
+    <!-- SI:AVISO -->
+    <section id="temporada" class="season">
+      <div class="container season__inner">
+        <div class="season__copy">
+          <p class="eyebrow">De temporada</p>
+          <h2>%%AVISO_TITULO%%</h2>
+          <p>%%AVISO_TEXTO%%</p>
+          <a class="btn btn--light" href="%%AVISO_WA%%" target="_blank" rel="noopener"><svg class="ic"><use href="#i-chat"/></svg> Reservar por WhatsApp</a>
+        </div>
+        <div class="season__petals" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </div>
+    </section>
+    <!-- /SI:AVISO -->
+
+    <!-- CATÁLOGO -->
+    <section id="catalogo" class="section">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Catálogo</p>
+          <h2>Elige tu <em class="script">arreglo</em></h2>
+          <p class="muted">Cada ramo se arma al momento con las flores más frescas de la semana. Toca una etiqueta para elegir tamaño o cantidad de varas. Los ramos por varas se hacen <strong>previa reserva y confirmación</strong>.</p>
+        </div>
+        <div class="catalog-bar">
+          <div class="filters" id="filters" role="tablist" aria-label="Categorías"></div>
+          <label class="sort">
+            <span>Ordenar</span>
+            <select id="sort">
+              <option value="destacados">Destacados</option>
+              <option value="precio-asc">Menor precio</option>
+              <option value="precio-desc">Mayor precio</option>
+            </select>
+          </label>
+        </div>
+        <p class="count" id="count"></p>
+        <div class="grid is-all" id="productGrid"><!-- SEO:PRODUCTOS --></div>
+        <div class="center">
+          <button class="btn btn--ghost" type="button" data-encargo>¿Buscas algo distinto? Cuéntanos tu idea</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CÓMO COMPRAR -->
+    <section id="comprar" class="section section--paper">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Cómo comprar</p>
+          <h2>Tan simple como <em class="script">regalar</em></h2>
+        </div>
+        <ol class="steps">
+          <li class="step"><span class="step__n">1</span><h3>Elige y arma tu pedido</h3><p>Escoge el arreglo, el tamaño o las varas, y agrégalo a tu pedido. Puedes sumar una nota para la persona que lo recibe.</p></li>
+          <li class="step"><span class="step__n">2</span><h3>Confirmamos por WhatsApp</h3><p>Te llega el pedido armado por WhatsApp y confirmamos disponibilidad, color y horario. Las flores por varas, con previa reserva.</p></li>
+          <li class="step"><span class="step__n">3</span><h3>Retira o te lo llevamos</h3><p>Retiras en la tienda de Bombero Villalobos o coordinamos el despacho a domicilio. Pagas por transferencia, efectivo o tarjeta.</p></li>
+        </ol>
+        <div class="chips">
+          <span><svg class="ic"><use href="#i-truck"/></svg> Despachos a domicilio</span>
+          <span><svg class="ic"><use href="#i-store"/></svg> Retiro en tienda</span>
+          <span><svg class="ic"><use href="#i-cal"/></svg> Reserva con anticipación para fechas especiales</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOVIAS Y EVENTOS -->
+    <section id="eventos" class="section">
+      <div class="container events">
+        <div class="events__copy">
+          <p class="eyebrow">Matrimonios · eventos · talleres</p>
+          <h2>Flores para los días <em class="script">que importan</em></h2>
+          <p class="muted">Ramos de novia, centros de mesa, decoración para eventos corporativos y arreglos de despedida. También hacemos talleres florales: aprendes a armar tu propio centro de mesa, con flores de temporada y sin experiencia previa.</p>
+          <ul class="ticks">
+            <li><svg class="ic"><use href="#i-check"/></svg> Propuestas a medida, en la paleta de tu matrimonio</li>
+            <li><svg class="ic"><use href="#i-check"/></svg> Canastas, jarrones y cubre urnas para despedidas</li>
+            <li><svg class="ic"><use href="#i-check"/></svg> Talleres florales para grupos y celebraciones</li>
+          </ul>
+          <a class="btn btn--primary" id="eventWa" target="_blank" rel="noopener"><svg class="ic"><use href="#i-chat"/></svg> Cotizar mi evento</a>
+        </div>
+        <div class="events__art" aria-hidden="true">
+          <img class="events__img" src="%%NOVIA_FOTO%%" alt="Ramo de novia con rosas blancas y flores preservadas" loading="lazy">
+          <span class="stamp"><span>Previa<br>cotización</span></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIENDA -->
+    <section id="tienda" class="section section--shop">
+      <div class="container shop">
+        <div class="shop__photo"><img src="%%TIENDA_FOTO%%" alt="Interior de la tienda Jardín Blumer, con peonias y flores de temporada" loading="lazy"></div>
+        <div class="shop__info">
+          <p class="eyebrow">Visítanos</p>
+          <h2>Nuestra casa <em class="script">floral</em></h2>
+          <ul class="contact-list">
+            <li><svg class="ic"><use href="#i-pin"/></svg><div><small>Dirección</small><span>%%DIRECCION%%, %%CIUDAD%%</span></div></li>
+            <li><svg class="ic"><use href="#i-clock"/></svg><div><small>Horario</small><span>%%HORARIO_DETALLE%%</span></div></li>
+            <li><svg class="ic"><use href="#i-chat"/></svg><div><small>WhatsApp</small><a id="contactWa" target="_blank" rel="noopener">Pedidos y consultas</a></div></li>
+            <!-- SI:INSTAGRAM --><li><svg class="ic"><use href="#i-ig"/></svg><div><small>Instagram</small><a href="https://www.instagram.com/%%INSTAGRAM%%/" target="_blank" rel="noopener">@%%INSTAGRAM%%</a></div></li><!-- /SI:INSTAGRAM -->
+          </ul>
+          <div class="shop__cta">
+            <a class="btn btn--primary" href="%%MAPA_URL%%" target="_blank" rel="noopener"><svg class="ic"><use href="#i-pin"/></svg> Cómo llegar</a>
+            <a class="btn btn--whatsapp" id="contactWaBtn" target="_blank" rel="noopener"><svg class="ic"><use href="#i-chat"/></svg> Escribir ahora</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#" class="brand brand--footer"><span class="brand__script">%%MARCA_A%%</span><span class="brand__big">%%MARCA_B%%</span></a>
+      <p>%%RUBRO%% · %%DIRECCION%%, %%CIUDAD%% · Tu espacio natural en casa</p>
+      <a class="btn btn--whatsapp btn--sm" id="footerWa" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </footer>
+
+  <a class="wa-float" id="floatWa" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><svg class="ic"><use href="#i-chat"/></svg></a>
+
+  <!-- FICHA DE PRODUCTO -->
+  <div class="modal" id="productModal" aria-hidden="true">
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__panel pm" role="dialog" aria-modal="true" aria-labelledby="pmName">
+      <button class="modal__close" type="button" data-close aria-label="Cerrar">×</button>
+      <div class="pm__media">
+        <div class="pm__frame">
+          <img id="pmImg" src="img/logo.jpg" alt="">
+          <button class="pm__nav pm__nav--prev" type="button" data-step-photo="-1" aria-label="Foto anterior">‹</button>
+          <button class="pm__nav pm__nav--next" type="button" data-step-photo="1" aria-label="Foto siguiente">›</button>
+        </div>
+        <div class="pm__thumbs" id="pmThumbs"></div>
+      </div>
+      <div class="pm__info">
+        <p class="eyebrow" id="pmCat"></p>
+        <h2 id="pmName"></h2>
+        <p class="pm__price" id="pmPrice"></p>
+        <p class="pm__desc" id="pmDesc"></p>
+        <div id="pmSizesWrap">
+          <p class="pm__label"><span id="pmSelLabel">Tamaño</span> <span id="pmSizeHint"></span></p>
+          <div class="pm__sizes" id="pmSizes" role="radiogroup" aria-label="Elige una opción"></div>
+        </div>
+        <div class="pm__qty">
+          <p class="pm__label">Cantidad</p>
+          <div class="qty qty--lg">
+            <button type="button" data-qty="-1" aria-label="Menos">−</button>
+            <span id="pmQty">1</span>
+            <button type="button" data-qty="1" aria-label="Más">+</button>
+          </div>
+        </div>
+        <p class="form__error" id="pmError" hidden></p>
+        <button class="btn btn--primary btn--block btn--lg" type="button" id="pmAdd"><svg class="ic"><use href="#i-bag"/></svg> Agregar a mi pedido</button>
+        <a class="btn btn--ghost btn--block" id="pmAsk" target="_blank" rel="noopener"><svg class="ic"><use href="#i-chat"/></svg> Consultar por WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- PEDIDO -->
+  <aside class="bag" id="bag" aria-hidden="true">
+    <div class="bag__backdrop" data-close-bag></div>
+    <div class="bag__panel" role="dialog" aria-modal="true" aria-labelledby="bagTitle">
+      <header class="bag__head">
+        <h2 id="bagTitle">Tu pedido</h2>
+        <button class="modal__close" type="button" data-close-bag aria-label="Cerrar">×</button>
+      </header>
+      <div class="bag__body">
+        <div class="bag__empty" id="bagEmpty">
+          <svg class="ic"><use href="#i-bag"/></svg>
+          <p>Tu pedido está vacío. Agrega un arreglo del catálogo o cuéntanos tu idea aquí abajo.</p>
+          <a class="btn btn--ghost btn--sm" href="#catalogo" data-close-bag>Ver catálogo</a>
+        </div>
+        <ul class="bag__list" id="bagList"></ul>
+
+        <div class="coupon" id="couponBox" hidden>
+          <div id="cuponForm">
+            <label class="pm__label" for="fCupon">¿Tienes un código de descuento?</label>
+            <div class="coupon__row">
+              <input id="fCupon" type="text" placeholder="Ej: PRIMAVERA" autocomplete="off" autocapitalize="characters" spellcheck="false">
+              <button class="btn btn--ghost btn--sm" type="button" id="cuponBtn">Aplicar</button>
+            </div>
+          </div>
+          <div class="coupon__status" id="cuponStatus" role="status" aria-live="polite" hidden></div>
+        </div>
+
+        <form id="orderForm" class="checkout" novalidate>
+          <details class="encargo" id="encargoBox">
+            <summary>¿Quieres algo distinto? <strong>Cuéntanos tu idea</strong></summary>
+            <textarea id="fEncargo" rows="2" placeholder="Ej: Ramo de 30 rosas rosadas con eucalipto, para el sábado"></textarea>
+          </details>
+
+          <p class="checkout__step"><span>1</span> Tus datos</p>
+          <label>Tu nombre
+            <input id="fNombre" type="text" autocomplete="name" placeholder="Ej: Camila Rojas">
+          </label>
+          <label>Para quién es <small>(opcional)</small>
+            <input id="fPara" type="text" placeholder="Ej: Mi mamá, Josefa, equipo de ventas…">
+          </label>
+          <label>Mensaje para la tarjeta <small>(opcional)</small>
+            <input id="fTarjeta" type="text" maxlength="140" placeholder="Ej: Gracias por todo 💛">
+          </label>
+
+          <p class="checkout__step"><span>2</span> Entrega</p>
+          <div class="seg seg--2" role="radiogroup" aria-label="Tipo de entrega">
+            <label><input type="radio" name="entrega" value="retiro" checked><span><svg class="ic"><use href="#i-store"/></svg>Retiro en tienda</span></label>
+            <label><input type="radio" name="entrega" value="domicilio"><span><svg class="ic"><use href="#i-truck"/></svg>Despacho a domicilio</span></label>
+            <label><input type="radio" name="entrega" value="envio"><span><svg class="ic"><use href="#i-pin"/></svg>Otra ciudad</span></label>
+          </div>
+          <label>Día y hora <small>(opcional)</small>
+            <input id="fFecha" type="text" placeholder="Ej: Sábado en la mañana">
+          </label>
+
+          <div class="ship" data-domicilio hidden>
+            <label>Dirección de entrega
+              <input id="fDireccion" type="text" autocomplete="street-address" placeholder="Calle, número, depto, comuna">
+            </label>
+          </div>
+
+          <div class="ship" data-envio hidden>
+            <div class="row">
+              <label>Región
+                <select id="fRegion"><option value="">Elige tu región</option></select>
+              </label>
+              <label>Comuna
+                <select id="fComuna" disabled><option value="">Primero la región</option></select>
+              </label>
+            </div>
+            <p class="pm__label">Empresa de envío</p>
+            <div class="seg couriers" id="fCourier" role="radiogroup" aria-label="Empresa de envío"></div>
+            <div class="seg seg--2" role="radiogroup" aria-label="Modalidad de envío">
+              <label><input type="radio" name="modo" value="sucursal" checked><span><svg class="ic"><use href="#i-store"/></svg>Retiro en sucursal</span></label>
+              <label><input type="radio" name="modo" value="domicilio"><span><svg class="ic"><use href="#i-home"/></svg>A domicilio</span></label>
+            </div>
+            <label data-modo="sucursal">Sucursal donde retiras
+              <input id="fSucursal" type="text" placeholder="Nombre o dirección de la sucursal">
+            </label>
+            <a class="locator" id="fLocator" data-modo="sucursal" target="_blank" rel="noopener"></a>
+            <label data-modo="domicilio" hidden>Dirección de entrega
+              <input id="fDireccion2" type="text" autocomplete="street-address" placeholder="Calle, número, depto">
+            </label>
+          </div>
+
+          <p class="checkout__step"><span>3</span> Pago</p>
+          <div class="seg seg--3" role="radiogroup" aria-label="Medio de pago">
+            <label><input type="radio" name="pago" value="transferencia" checked><span>Transferencia</span></label>
+            <label data-local><input type="radio" name="pago" value="efectivo"><span>Efectivo</span></label>
+            <label><input type="radio" name="pago" value="tarjeta"><span>Débito / Crédito</span></label>
+          </div>
+
+          <label>Comentario <small>(opcional)</small>
+            <input id="fNota" type="text" placeholder="Ej: colores suaves, sin lirios…">
+          </label>
+
+          <div class="preview">
+            <p class="preview__label">Así llegará tu mensaje</p>
+            <div id="msgPreview"></div>
+          </div>
+        </form>
+      </div>
+      <footer class="bag__foot">
+        <div class="bag__sums" id="bagSums" hidden></div>
+        <div class="bag__total"><span id="bagTotalLabel">Total</span><strong id="bagTotal">$0</strong></div>
+        <p class="bag__hint" id="bagHint"></p>
+        <p class="form__error" id="formError" hidden></p>
+        <button class="btn btn--whatsapp btn--block btn--lg" type="submit" form="orderForm"><svg class="ic"><use href="#i-chat"/></svg> Enviar pedido por WhatsApp</button>
+        <p class="bag__legal">Las flores por varas se hacen previa reserva y confirmación.</p>
+      </footer>
+    </div>
+  </aside>
+
+  <button class="fab" type="button" data-open-bag hidden><svg class="ic"><use href="#i-bag"/></svg><span id="fabLabel">Mi pedido</span></button>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="app.js" charset="utf-8"></script>
+</body>
+</html>

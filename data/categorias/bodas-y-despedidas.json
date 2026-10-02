@@ -1,0 +1,9 @@
+{
+  "nombre": "Novias y despedidas",
+  "productos": [
+    "ramo-novia",
+    "canasta-despedida"
+  ],
+  "orden": 30,
+  "visible": true
+}

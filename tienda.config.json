@@ -1,0 +1,31 @@
+{
+  "_ayuda": "Datos fijos de la tienda (los define el desarrollador). Contacto y portada van en data/ajustes.json, que el cliente edita desde /admin.",
+  "nombre": "Jardín Blumer",
+  "marca_a": "Jardín",
+  "marca_b": "Blumer",
+  "rubro": "Floristería",
+  "schema_tipo": "Florist",
+  "seo_titulo": "Floristería en Rancagua | Ramos, bouquets y flores de temporada · Jardín Blumer",
+  "seo_descripcion": "Floristería en Rancagua: bouquets mixtos, FlowerBox, peonias, tulipanes, girasoles y rosas por varas. Flores naturales de temporada, despachos a domicilio, matrimonios y talleres florales.",
+  "github_repo": "Bemol69/jardinblumer",
+  "site_url": "https://jardinblumer.vercel.app",
+  "google_verificacion": "",
+  "mapa_url": "https://maps.app.goo.gl/vC5DX1CpuehTfvDn8",
+  "hero": [
+    { "foto": "img/hero/hero-1.jpg", "alt": "Peonias coral recién llegadas a Jardín Blumer" },
+    { "foto": "img/hero/hero-2.jpg", "alt": "Bouquet mixto XL de flores silvestres de primavera" },
+    { "foto": "img/hero/hero-3.jpg", "alt": "Ramo silvestre envuelto con cinta y tarjeta Blumer" }
+  ],
+  "fuentes": { "titulos": "Bodoni Moda", "texto": "Instrument Sans", "script": "Pinyon Script" },
+  "colores": {
+    "fondo": "#E6F3F3",
+    "papel": "#FBFAF5",
+    "agua": "#C2E3E4",
+    "tinta": "#262B48",
+    "tinta_suave": "#59607C",
+    "coral": "#E4566B",
+    "coral_oscuro": "#BE3650",
+    "sol": "#F2C74A",
+    "oliva": "#56662F"
+  }
+}

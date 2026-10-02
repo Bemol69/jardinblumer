@@ -1,0 +1,18 @@
+{
+  "nombre": "Canasta floral de despedida",
+  "foto": "/img/productos/canasta.jpg",
+  "fotos": [],
+  "descripcion": "Canastos, jarrones y cubre urnas para acompañar con calma y belleza. Diseño a pedido.",
+  "selector": "Formato",
+  "variantes": [
+    {
+      "nombre": "Canasta",
+      "precio": 45000
+    }
+  ],
+  "a_cotizar": true,
+  "etiqueta": "A cotizar",
+  "orden": 70,
+  "agotado": false,
+  "visible": true
+}

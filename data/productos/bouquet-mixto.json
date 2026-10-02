@@ -1,0 +1,40 @@
+{
+  "nombre": "Bouquet Mixto",
+  "foto": "/img/productos/bouquet-mixto.jpg",
+  "fotos": [
+    "/img/productos/bouquet-mixto-2.jpg"
+  ],
+  "descripcion": "Nuestro sello: flores de temporada mezcladas una a una, estilo silvestre. Cada tamaño indica las varas que lleva.",
+  "selector": "Tamaño",
+  "variantes": [
+    {
+      "nombre": "S · 16 a 20 varas",
+      "precio": 35000
+    },
+    {
+      "nombre": "M · 24 a 30 varas",
+      "precio": 47000
+    },
+    {
+      "nombre": "L · 34 a 39 varas",
+      "precio": 66000
+    },
+    {
+      "nombre": "XL · 45 a 52 varas",
+      "precio": 87000
+    },
+    {
+      "nombre": "2XL · 56 a 65 varas",
+      "precio": 125000
+    },
+    {
+      "nombre": "3XL · 66 a 72 varas",
+      "precio": 148000
+    }
+  ],
+  "a_cotizar": false,
+  "etiqueta": "Más pedido",
+  "orden": 10,
+  "agotado": false,
+  "visible": true
+}

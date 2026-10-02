@@ -1,0 +1,11 @@
+{
+  "nombre": "Flores por varas",
+  "productos": [
+    "peonias-coral",
+    "tulipanes-mixtos",
+    "girasoles",
+    "rosas-a-eleccion"
+  ],
+  "orden": 20,
+  "visible": true
+}

@@ -1,0 +1,8 @@
+{
+  "name": "jardinblumer",
+  "private": true,
+  "description": "Tienda Jardín Blumer: sitio estático + panel /admin. El build optimiza las fotos con sharp.",
+  "scripts": { "build": "node scripts/build.mjs" },
+  "engines": { "node": ">=18" },
+  "dependencies": { "sharp": "^0.34.4" }
+}

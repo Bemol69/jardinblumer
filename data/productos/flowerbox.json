@@ -1,0 +1,36 @@
+{
+  "nombre": "FlowerBox",
+  "foto": "/img/productos/flowerbox.jpg",
+  "fotos": [
+    "/img/productos/flowerbox-2.jpg"
+  ],
+  "descripcion": "Caja de flores para regalar: un obsequio único, delicado y elegante, armado con lo más lindo de la temporada.",
+  "selector": "Tamaño",
+  "variantes": [
+    {
+      "nombre": "XS",
+      "precio": 45000
+    },
+    {
+      "nombre": "S",
+      "precio": 59000
+    },
+    {
+      "nombre": "M",
+      "precio": 78000
+    },
+    {
+      "nombre": "L",
+      "precio": 97000
+    },
+    {
+      "nombre": "XL",
+      "precio": 120000
+    }
+  ],
+  "a_cotizar": false,
+  "etiqueta": "Para regalar",
+  "orden": 30,
+  "agotado": false,
+  "visible": true
+}

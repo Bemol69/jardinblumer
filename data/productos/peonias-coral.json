@@ -1,0 +1,20 @@
+{
+  "nombre": "Peonias coral · bouquet",
+  "foto": "/img/productos/peonias.jpg",
+  "fotos": [
+    "/img/productos/peonias-2.jpg"
+  ],
+  "descripcion": "La flor más esperada del año, con tiempo límite. Variedades exclusivas de la VI Región, solo en temporada.",
+  "selector": "Formato",
+  "variantes": [
+    {
+      "nombre": "Bouquet de peonias",
+      "precio": 38000
+    }
+  ],
+  "a_cotizar": true,
+  "etiqueta": "Solo en temporada",
+  "orden": 5,
+  "agotado": false,
+  "visible": true
+}

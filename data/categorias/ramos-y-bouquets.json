@@ -1,0 +1,10 @@
+{
+  "nombre": "Ramos y bouquets",
+  "productos": [
+    "bouquet-mixto",
+    "bouquet-mixto-jarron",
+    "flowerbox"
+  ],
+  "orden": 10,
+  "visible": true
+}

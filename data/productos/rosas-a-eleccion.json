@@ -1,0 +1,38 @@
+{
+  "nombre": "Rosas a elección",
+  "foto": "/img/productos/rosas.jpg",
+  "fotos": [],
+  "descripcion": "Elige el color y la cantidad. Previa reserva y confirmación.",
+  "selector": "Cantidad de varas",
+  "variantes": [
+    {
+      "nombre": "10 varas",
+      "precio": 29000
+    },
+    {
+      "nombre": "20 varas",
+      "precio": 65000
+    },
+    {
+      "nombre": "30 varas",
+      "precio": 95000
+    },
+    {
+      "nombre": "40 varas",
+      "precio": 128000
+    },
+    {
+      "nombre": "50 varas",
+      "precio": 156000
+    },
+    {
+      "nombre": "100 varas",
+      "precio": 325000
+    }
+  ],
+  "a_cotizar": false,
+  "etiqueta": "Previa reserva",
+  "orden": 60,
+  "agotado": false,
+  "visible": true
+}
